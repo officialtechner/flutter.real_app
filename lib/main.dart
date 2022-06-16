@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_app/transaction.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final List<Transaction> transactions = [
-    Transaction("1", "New Shoes", 23.20, DateTime.now()),
+    Transaction("1", "New Shoes1", 24.20, DateTime.now()),
     Transaction("2", "Weekly Gold", 26.20, DateTime.now()),
     Transaction("12", "222Weekly Gold", 126.20, DateTime.now()),
   ];
@@ -44,14 +45,27 @@ class MyHomePage extends StatelessWidget {
                       margin:
                           EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2)),
-                      child: Text(tx.amount.toString()),
+                          border: Border.all(color: Colors.purple, width: 2)),
+                      child: Text(
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.purple,
+                              fontSize: 20),
+                          "\$${tx.amount}"),
                       padding: EdgeInsets.all(10),
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(tx.title),
-                        Text(tx.date.toString()),
+                        Text(
+                          tx.title,
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          DateFormat("yyy-MM-dd").format(tx.date),
+                          style: TextStyle(fontSize: 15, color: Colors.grey),
+                        ),
                       ],
                     )
                   ],

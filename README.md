@@ -7,6 +7,11 @@ A new Flutter project.
 Open Terminal : open -a Simulator.app
 
 
+# Add external Package
+
+https://pub.dev/packages/intl/install
+flutter pub add intl 
+
 
 
 Flutter 3.1.0-0.0.pre.1253 • channel master •
