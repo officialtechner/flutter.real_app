@@ -17,8 +17,7 @@ class _UserTransactionsState extends State<UserTransactions> {
     Transaction("2", "Weekly Gold", 26.20, DateTime.now()),
     Transaction("12", "222Weekly Gold", 126.20, DateTime.now()),
     Transaction("2", "Weekly Gold", 26.20, DateTime.now()),
-    Transaction("12", "222Weekly Gold", 126.20, DateTime.now()),
-    Transaction("12", "222Weekly Gold", 126.20, DateTime.now()),
+    Transaction("12", "222Weekly Gold", 126.20, DateTime.now())
   ];
 
   void _addNewTransaction(String txtitle, double txamount) {

@@ -13,6 +13,13 @@ https://pub.dev/packages/intl/install
 flutter pub add intl 
 
 
+sudo chown -R $(whoami) /usr/local/Homebrew/ 
+
+
+FVM:
+
+https://fvm.app/docs/getting_started/installation
+
 
 Flutter 3.1.0-0.0.pre.1253 • channel master •
 https://github.com/flutter/flutter.git
